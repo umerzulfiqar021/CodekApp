@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View,TextInput } from 'react-native'
 import React, { useState } from 'react'
 
-const Input = ({Ref}) => {
+const Input = ({onSubmitEditing}) => {
     const[input,setInput] = useState('')
   return (
     <View>
@@ -10,7 +10,14 @@ const Input = ({Ref}) => {
         style = {styles.Input}
         onChangeText={(value)=> setInput(value)}
         placeholder='Enter value'
-        ref={Ref}
+        // ref={Ref}
+        onSubmitEditing={()=>{
+          if (!input) return
+          onSubmitEditing(input)
+          setInput('')
+        }
+         
+        }
         />
       
     </View>

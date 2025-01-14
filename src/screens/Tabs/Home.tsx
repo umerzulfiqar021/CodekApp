@@ -2,7 +2,7 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { memo,} from 'react';
 import ButtonComponent from '../../components/ButtonComponent';
-import Profile from './Profile';
+
 import { useNavigation,useRoute } from '@react-navigation/native'; // instead of prop we can use hooks
 function forMemo({title}){
 

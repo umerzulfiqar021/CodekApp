@@ -12,7 +12,7 @@ export default function App() {
   const Root = createStackNavigator();
   return (
     <NavigationContainer>
-      <Root.Navigator>
+      <Root.Navigator >
         <Root.Screen
           name={"Home"}
           component={Home}
