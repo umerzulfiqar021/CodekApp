@@ -22,6 +22,9 @@ const Home = ({navigation,route}) => {
     const onclick4 = ()=> {
       navigation.push('Todo')
     }
+    const onclick5 = ()=> {
+      navigation.push('Animate')
+    }
 
   return (
         
@@ -32,6 +35,8 @@ const Home = ({navigation,route}) => {
       <ButtonComponent title='go to Profile' onPress={onclick}/>
       <ButtonComponent  title='Reducer' onPress={onclick3}/>
       <ButtonComponent  title='To-do' onPress={onclick4}/>
+      <ButtonComponent  title='Animate' onPress={onclick5}/>
+
     </View>
     
   )
@@ -43,7 +48,8 @@ const styles = StyleSheet.create({
     main: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'space-evenly'
+        justifyContent: 'space-evenly',
+        backgroundColor: '#039'
         
     }
 })

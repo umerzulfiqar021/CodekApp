@@ -9,6 +9,7 @@ import Profile from "./src/screens/Tabs/Profile";
 import Setting from "./src/screens/Tabs/Setting"
 import ReducerScreen from "./src/screens/Tabs/ReducerScreen"
 import Todo from "./src/screens/Tabs/Todo";
+import Animate from "./src/screens/Animate";
 export default function App() {
   // Stack= createStackNavigator()
   const Root = createStackNavigator();
@@ -36,6 +37,8 @@ export default function App() {
       options={{headerShown: false}}
       />
       <Root.Screen name= 'Todo' component={Todo} options={{headerShown:false}}/>
+      <Root.Screen name= 'Animate' component={Animate} options={{headerShown:false}}/>
+
       </Root.Navigator>
     </NavigationContainer>
   );
@@ -47,5 +50,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    
   },
 });
