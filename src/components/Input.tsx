@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View,TextInput } from 'react-native'
 import React, { useState } from 'react'
 
-const Input = ({onSubmitEditing}) => {
+const Input = ({onSubmitEditing,placeholder}) => {
     const[input,setInput] = useState('')
   return (
     <View>
@@ -9,7 +9,7 @@ const Input = ({onSubmitEditing}) => {
         value= {input}
         style = {styles.Input}
         onChangeText={(value)=> setInput(value)}
-        placeholder='Enter value'
+        placeholder= {placeholder ? placeholder : 'Enter value' }
         // ref={Ref}
         onSubmitEditing={()=>{
           if (!input) return
@@ -31,7 +31,7 @@ Input: {
     borderWidth: 1,
     padding: 12,
     marginTop: 5,
-    width: 99,
+    width: 150,
     borderRadius: 3,
 }
 })
