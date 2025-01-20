@@ -6,7 +6,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./src/screens/Tabs/Home";
 import Profile from "./src/screens/Tabs/Profile";
-
+import Setting from "./src/screens/Tabs/Setting"
+import ReducerScreen from "./src/screens/Tabs/ReducerScreen"
 export default function App() {
   // Stack= createStackNavigator()
   const Root = createStackNavigator();
@@ -23,7 +24,16 @@ export default function App() {
       component={Profile}
       options={{headerShown: false}}
       />
-      
+      <Root.Screen
+      name= {"Setting"}
+      component={Setting}
+      options={{headerShown: false}}
+      />
+      <Root.Screen
+      name= {'ReducerScreen'}
+      component={ReducerScreen}
+      options={{headerShown: false}}
+      />
       </Root.Navigator>
     </NavigationContainer>
   );
