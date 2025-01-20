@@ -8,6 +8,7 @@ import Home from "./src/screens/Tabs/Home";
 import Profile from "./src/screens/Tabs/Profile";
 import Setting from "./src/screens/Tabs/Setting"
 import ReducerScreen from "./src/screens/Tabs/ReducerScreen"
+import Todo from "./src/screens/Tabs/Todo";
 export default function App() {
   // Stack= createStackNavigator()
   const Root = createStackNavigator();
@@ -34,6 +35,7 @@ export default function App() {
       component={ReducerScreen}
       options={{headerShown: false}}
       />
+      <Root.Screen name= 'Todo' component={Todo} options={{headerShown:false}}/>
       </Root.Navigator>
     </NavigationContainer>
   );

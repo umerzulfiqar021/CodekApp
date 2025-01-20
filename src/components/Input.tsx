@@ -1,13 +1,13 @@
 import { StyleSheet, Text, View,TextInput } from 'react-native'
 import React, { useState } from 'react'
 
-const Input = ({onSubmitEditing,placeholder}) => {
+const Input = ({onSubmitEditing,placeholder,style}) => {
     const[input,setInput] = useState('')
   return (
     <View>
         <TextInput
         value= {input}
-        style = {styles.Input}
+        style = {[styles.Input,style]}
         onChangeText={(value)=> setInput(value)}
         placeholder= {placeholder ? placeholder : 'Enter value' }
         // ref={Ref}

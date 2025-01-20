@@ -19,6 +19,9 @@ const Home = ({navigation,route}) => {
     const onclick3 = ()=> {
       navigation.push('ReducerScreen')
     }
+    const onclick4 = ()=> {
+      navigation.push('Todo')
+    }
 
   return (
         
@@ -28,6 +31,7 @@ const Home = ({navigation,route}) => {
     <ButtonComponent title='GO to Settings' onPress={onclick2}/>
       <ButtonComponent title='go to Profile' onPress={onclick}/>
       <ButtonComponent  title='Reducer' onPress={onclick3}/>
+      <ButtonComponent  title='To-do' onPress={onclick4}/>
     </View>
     
   )
