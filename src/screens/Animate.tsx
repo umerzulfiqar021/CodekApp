@@ -4,6 +4,7 @@ import ButtonComponent from '../components/ButtonComponent'
 
 const Animate = () => {
 const fade = useAnimatedValue(0)
+
 const fadeIn = ()=> {
 Animated.timing(fade,{
     toValue:1,
@@ -34,6 +35,19 @@ Animated.timing(fade,{
               ]}>
                 
               <Text style={styles.fadingText}>Fading View!</Text>
+              <Animated.Text
+              style = {{
+                fontSize: 42,
+                transform:[{
+                  translateY: fade.interpolate({
+                    inputRange:[0,1],
+                    outputRange:[0,400]
+                  })
+                }]
+              }}
+              >
+                i will move in through y-axis
+              </Animated.Text>
             </Animated.View>
             <Animated.Image
             style = {[styles.image,

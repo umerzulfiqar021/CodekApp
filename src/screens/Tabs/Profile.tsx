@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import Input from '../../components/Input'
 const STORAGE_KEY = 'ASYNC_STORAGE_NAME_EXAMPLE'
+
 const Profile = ({route}) => {
   const [name,setName] = useState('Umer')
 

@@ -25,7 +25,9 @@ const Home = ({navigation,route}) => {
     const onclick5 = ()=> {
       navigation.push('Animate')
     }
-
+    const onclick6 = ()=> {
+      navigation.push('Pan')
+    }
   return (
         
     <View style = {styles.main}>
@@ -36,6 +38,7 @@ const Home = ({navigation,route}) => {
       <ButtonComponent  title='Reducer' onPress={onclick3}/>
       <ButtonComponent  title='To-do' onPress={onclick4}/>
       <ButtonComponent  title='Animate' onPress={onclick5}/>
+      <ButtonComponent  title='Pan Responder' onPress={onclick6}/>
 
     </View>
     

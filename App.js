@@ -10,6 +10,7 @@ import Setting from "./src/screens/Tabs/Setting"
 import ReducerScreen from "./src/screens/Tabs/ReducerScreen"
 import Todo from "./src/screens/Tabs/Todo";
 import Animate from "./src/screens/Animate";
+import Pan from "./src/screens/Pan";
 export default function App() {
   // Stack= createStackNavigator()
   const Root = createStackNavigator();
@@ -38,6 +39,7 @@ export default function App() {
       />
       <Root.Screen name= 'Todo' component={Todo} options={{headerShown:false}}/>
       <Root.Screen name= 'Animate' component={Animate} options={{headerShown:false}}/>
+      <Root.Screen name= 'Pan' component={Pan} options={{headerShown:false}}/>
 
       </Root.Navigator>
     </NavigationContainer>
