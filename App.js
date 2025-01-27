@@ -11,10 +11,14 @@ import ReducerScreen from "./src/screens/Tabs/ReducerScreen"
 import Todo from "./src/screens/Tabs/Todo";
 import Animate from "./src/screens/Animate";
 import Pan from "./src/screens/Pan";
+import Tool from "./src/screens/Tool";
+import { Provider } from "react-redux";
+import { ourStore } from "./src/redux/store/store";
 export default function App() {
   // Stack= createStackNavigator()
   const Root = createStackNavigator();
   return (
+    <Provider store={ourStore}>
     <NavigationContainer>
       <Root.Navigator >
         <Root.Screen
@@ -40,9 +44,11 @@ export default function App() {
       <Root.Screen name= 'Todo' component={Todo} options={{headerShown:false}}/>
       <Root.Screen name= 'Animate' component={Animate} options={{headerShown:false}}/>
       <Root.Screen name= 'Pan' component={Pan} options={{headerShown:false}}/>
+      <Root.Screen name= 'Tool' component={Tool} options={{headerShown:false}}/>
 
       </Root.Navigator>
     </NavigationContainer>
+    </Provider>
   );
 }
 

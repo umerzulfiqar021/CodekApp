@@ -1,6 +1,6 @@
 import { Animated, PanResponder, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React, { useRef } from 'react'
-import { transform } from '@babel/core'
+
 
 const Pan = () => {
     const pan = useRef(new Animated.ValueXY()).current
@@ -68,9 +68,10 @@ const styles = StyleSheet.create({
       box: {
         height: 150,
         width: 150,
-        backgroundColor: 'blue',
-        borderRadius: 5,
-        marginTop: 5
+        backgroundColor: '#067',
+        borderRadius: 15,
+        marginTop: 5,
+        
       },
     });
     

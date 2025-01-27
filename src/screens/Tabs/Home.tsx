@@ -28,6 +28,9 @@ const Home = ({navigation,route}) => {
     const onclick6 = ()=> {
       navigation.push('Pan')
     }
+    const onclick7 = ()=> {
+      navigation.push('Tool')
+    }
   return (
         
     <View style = {styles.main}>
@@ -39,6 +42,7 @@ const Home = ({navigation,route}) => {
       <ButtonComponent  title='To-do' onPress={onclick4}/>
       <ButtonComponent  title='Animate' onPress={onclick5}/>
       <ButtonComponent  title='Pan Responder' onPress={onclick6}/>
+      <ButtonComponent  title='Redux Tool Kit' onPress={onclick7}/>
 
     </View>
     
