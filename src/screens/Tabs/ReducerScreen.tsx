@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useReducer } from 'react'
 import Input from '../../components/Input'
+import { RootState } from '../../redux/store/store'
+import { useSelector } from 'react-redux'
 
 const reducer = (state, action)=>{
 switch(action.type){
@@ -13,6 +15,8 @@ switch(action.type){
 
 const Reducer = () => {
   const [state,dispatch] = useReducer(reducer,{first: '', last: ''})
+  const valueByAmount = useSelector((state:RootState)=>state.counter.number)
+
   return (
     <View style = {styles.container}>
       
@@ -25,6 +29,7 @@ const Reducer = () => {
           <Input placeholder={'Enter last name'} onSubmitEditing={(data)=>{
             dispatch({type:2,value:data})
           }} />
+        <Text>{valueByAmount}</Text>  
       </View>
     </View>
 

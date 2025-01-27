@@ -7,11 +7,12 @@ interface props{
     color?: string,
     onPress?:()=>void
 }
-const ButtonComponent= ({title,onPress}:props) => {
+const ButtonComponent= ({title,onPress,...props}:props) => {
   return (
     <View>
         <TouchableOpacity style = {styles.button} 
         onPress={onPress}
+        {...props}
         >
           <Text style = {{color: 'white'}}>{title}</Text>
         </TouchableOpacity>

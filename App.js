@@ -20,7 +20,7 @@ export default function App() {
   return (
     <Provider store={ourStore}>
     <NavigationContainer>
-      <Root.Navigator >
+      <Root.Navigator  >
         <Root.Screen
           name={"Home"}
           component={Home}
