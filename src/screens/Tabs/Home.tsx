@@ -34,6 +34,9 @@ const Home = ({navigation,route}) => {
     const onclick8 = ()=> {
       navigation.push('Data')
     }
+    const onclick9 = ()=> {
+      navigation.push('PutData')
+    }
   return (
         
     <View style = {styles.main}>
@@ -47,6 +50,8 @@ const Home = ({navigation,route}) => {
       <ButtonComponent  title='Pan Responder' onPress={onclick6}/>
       <ButtonComponent  title='Redux Tool Kit' onPress={onclick7}/>
       <ButtonComponent  title='Get Data' onPress={onclick8}/>
+      <ButtonComponent  title='PutData' onPress={onclick9}/>
+
     </View>
     
   )

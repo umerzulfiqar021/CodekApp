@@ -23,7 +23,15 @@ export const getData = createApi({
       },
       invalidatesTags: ['Update'],
     }),
+    addData: builder.mutation({
+      query: (name) =>({
+        url:`name`,
+        method: 'POST',
+        body: {name}
+      }),
+      invalidatesTags: ['Update']
+    })
   }),
 });
 
-export const { useGetNamesQuery, useDeleteDataMutation } = getData;
+export const { useGetNamesQuery, useDeleteDataMutation,useAddDataMutation } = getData;
