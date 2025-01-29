@@ -7,13 +7,19 @@ export default function List({ items, onPressItem }) {
       data={items}
       keyExtractor={(item) => item.id}
       renderItem={({ item, index }) => (
+        
         <TouchableOpacity
           style={[styles.item, { backgroundColor: itemColor(index) }]}
           onPress={() => onPressItem(item.id)}
+          
         >
           <Text style={styles.title}>{item.name}</Text> 
+          <Text style={styles.title}>{item.id}</Text> 
+
           {/* title to name */}
+          
         </TouchableOpacity>
+        
       )}
     />
   )

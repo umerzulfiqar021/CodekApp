@@ -9,9 +9,11 @@ import { useDispatch } from "react-redux";
 
 const Data = () => {
   const { isError, isLoading, data, error } = useGetNamesQuery(`name`);
-
+// const {id} = data;
   const [deleteData, { data: response, error: apiError }] =
     useDeleteDataMutation();
+  
+  
   
 
   // const deleteData1 = ()=> {
@@ -35,7 +37,7 @@ const Data = () => {
       </View>
     );
   }
-     return <List items={data} onPressItem={() => deleteData(2)} />;
+     return <List items={data} onPressItem={(id) => deleteData(id)} />;
 };
 
 export default Data;
