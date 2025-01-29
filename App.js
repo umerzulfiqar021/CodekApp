@@ -14,6 +14,7 @@ import Pan from "./src/screens/Pan";
 import Tool from "./src/screens/Tool";
 import { Provider } from "react-redux";
 import { ourStore } from "./src/redux/store/store";
+import Data from "./src/screens/Data";
 export default function App() {
   // Stack= createStackNavigator()
   const Root = createStackNavigator();
@@ -45,7 +46,7 @@ export default function App() {
       <Root.Screen name= 'Animate' component={Animate} options={{headerShown:false}}/>
       <Root.Screen name= 'Pan' component={Pan} options={{headerShown:false}}/>
       <Root.Screen name= 'Tool' component={Tool} options={{headerShown:false}}/>
-
+      <Root.Screen name= 'Data' component={Data} options={{headerShown:false}}/>
       </Root.Navigator>
     </NavigationContainer>
     </Provider>
