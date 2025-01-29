@@ -1,7 +1,11 @@
-import { StyleSheet, Text, View,TextInput } from 'react-native'
+import { StyleSheet, Text, View,TextInput,ViewStyle, } from 'react-native'
 import React, { useState } from 'react'
-
-const Input = ({onSubmitEditing,placeholder,style}) => {
+interface prop{
+style: ViewStyle,
+  onSubmitEditing: (a:any)=> void,
+  placeholder: any
+}
+const Input = ({onSubmitEditing,placeholder,style}:prop) => {
     const[input,setInput] = useState('')
   return (
     <View>

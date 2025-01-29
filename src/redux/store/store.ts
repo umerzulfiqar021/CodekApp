@@ -1,10 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import reducer from "../slice/counterSlice";
+import { getData } from "../reduxQuery/query";
 
  export const ourStore = configureStore({
     reducer:{
-        counter: reducer
-    } 
+        counter: reducer,
+        [getData.reducerPath]: getData.reducer
+    }, 
+    middleware : (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(getData.middleware)
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

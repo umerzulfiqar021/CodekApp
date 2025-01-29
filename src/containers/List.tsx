@@ -11,7 +11,8 @@ export default function List({ items, onPressItem }) {
           style={[styles.item, { backgroundColor: itemColor(index) }]}
           onPress={() => onPressItem(item.id)}
         >
-          <Text style={styles.title}>{item.title}</Text>
+          <Text style={styles.title}>{item.name}</Text> 
+          {/* title to name */}
         </TouchableOpacity>
       )}
     />
