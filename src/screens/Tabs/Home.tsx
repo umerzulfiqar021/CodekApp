@@ -1,70 +1,51 @@
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { memo,} from 'react';
-import ButtonComponent from '../../components/ButtonComponent';
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { memo } from "react";
+import ButtonComponent from "../../components/ButtonComponent";
 
-import { useNavigation,useRoute } from '@react-navigation/native'; // instead of prop we can use hooks
-function forMemo({title}){
-
-  return <Text>{title}</Text>
+import { useNavigation, useRoute } from "@react-navigation/native"; // instead of prop we can use hooks
+import Reducer from "./ReducerScreen";
+import Profile from "./Profile";
+function forMemo({ title }) {
+  return <Text>{title}</Text>;
 }
-const Memo = memo(forMemo)
-const Home = ({navigation,route}) => {
-    const onclick = ()=> {
-        navigation.push('Profile',{parama: 'Hello'}) //giving data
-    }
-    const onclick2 = ()=> {
-      navigation.push('Setting')
-    }
-    const onclick3 = ()=> {
-      navigation.push('ReducerScreen')
-    }
-    const onclick4 = ()=> {
-      navigation.push('Todo')
-    }
-    const onclick5 = ()=> {
-      navigation.push('Animate')
-    }
-    const onclick6 = ()=> {
-      navigation.push('Pan')
-    }
-    const onclick7 = ()=> {
-      navigation.push('Tool')
-    }
-    const onclick8 = ()=> {
-      navigation.push('Data')
-    }
-    const onclick9 = ()=> {
-      navigation.push('PutData')
-    }
+const Memo = memo(forMemo);
+const Home = ({ navigation, route }) => {
+  const onClick = (name) => {
+    navigation.push(name);
+  };
+
   return (
-        
-    <View style = {styles.main}>
-
-
-    <ButtonComponent title='GO to Settings' onPress={onclick2}/>
-      <ButtonComponent title='go to Profile' onPress={onclick}/>
-      <ButtonComponent  title='Reducer' onPress={onclick3}/>
-      <ButtonComponent  title='To-do' onPress={onclick4}/>
-      <ButtonComponent  title='Animate' onPress={onclick5}/>
-      <ButtonComponent  title='Pan Responder' onPress={onclick6}/>
-      <ButtonComponent  title='Redux Tool Kit' onPress={onclick7}/>
-      <ButtonComponent  title='Get Data' onPress={onclick8}/>
-      <ButtonComponent  title='PutData' onPress={onclick9}/>
-
+    <View style={styles.main}>
+      <ButtonComponent
+        title="GO to Settings"
+        onPress={() => onClick("Setting")}
+      />
+      <ButtonComponent title="go to Profile" onPress={() => onClick(Profile)} />
+      <ButtonComponent
+        title="Reducer"
+        onPress={() => onClick("ReducerScreen")}
+      />
+      <ButtonComponent
+        title="Animate Screen"
+        onPress={() => onClick("Animate")}
+      />
+      <ButtonComponent title="Go to Todo" onPress={() => onClick("Todo")} />
+      <ButtonComponent title="Pan Screen" onPress={() => onClick("Pan")} />
+      <ButtonComponent title="Redux Tool Kit" onPress={() => onClick("Tool")} />
+      <ButtonComponent title="View Data" onPress={() => onClick("Data")} />
+      <ButtonComponent title="Post & Put" onPress={() => onClick("PutData")} />
     </View>
-    
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
 
 const styles = StyleSheet.create({
-    main: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-        backgroundColor: '#039'
-        
-    }
-})
+  main: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "space-evenly",
+    backgroundColor: "#039",
+  },
+});
