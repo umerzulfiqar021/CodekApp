@@ -35,6 +35,8 @@ const Home = ({ navigation, route }) => {
       <ButtonComponent title="Redux Tool Kit" onPress={() => onClick("Tool")} />
       <ButtonComponent title="View Data" onPress={() => onClick("Data")} />
       <ButtonComponent title="Post & Put" onPress={() => onClick("PutData")} />
+      <ButtonComponent title="Go to Formic" onPress={() => onClick("Formic")} />
+
     </View>
   );
 };
@@ -46,6 +48,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "space-evenly",
-    backgroundColor: "#039",
+    // backgroundColor: "#039",
+    backgroundColor: "#e6e6e6",
   },
 });

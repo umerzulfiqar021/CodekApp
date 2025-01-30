@@ -5,13 +5,16 @@ import React from 'react'
 interface props{
     title: string,
     color?: string,
-    onPress?:()=>void
+    onPress?:()=>void,
+    disabled?: boolean
+    
 }
-const ButtonComponent= ({title,onPress,...props}:props) => {
+const ButtonComponent= ({title,onPress,disabled,...props}:props) => {
   return (
     <View>
         <TouchableOpacity style = {styles.button} 
         onPress={onPress}
+        disabled = {disabled}
         {...props}
         >
           <Text style = {{color: 'white'}}>{title}</Text>
