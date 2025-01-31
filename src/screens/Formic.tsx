@@ -19,6 +19,8 @@ const Formic = () => {
             handleChange,
             errors,
             isValid,
+            
+
           }) => (
             <>
               <TextInput

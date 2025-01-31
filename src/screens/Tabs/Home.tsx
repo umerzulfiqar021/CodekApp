@@ -35,7 +35,9 @@ const Home = ({ navigation, route }) => {
       <ButtonComponent title="Redux Tool Kit" onPress={() => onClick("Tool")} />
       <ButtonComponent title="View Data" onPress={() => onClick("Data")} />
       <ButtonComponent title="Post & Put" onPress={() => onClick("PutData")} />
-      <ButtonComponent title="Go to Formic" onPress={() => onClick("Formic")} />
+      <ButtonComponent title="Go to Formic && Login" onPress={() => onClick("Formic")} />
+      <ButtonComponent title="Go to Signup Screen" onPress={() => onClick("Signup")} />
+
 
     </View>
   );

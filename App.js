@@ -17,6 +17,7 @@ import { ourStore } from "./src/redux/store/store";
 import Data from "./src/screens/Data";
 import PutData from "./src/screens/PutData";
 import Formic from "./src/screens/Formic";
+import Signup from "./src/screens/Signup";
 export default function App() {
   // Stack= createStackNavigator()
   const Root = createStackNavigator();
@@ -51,6 +52,8 @@ export default function App() {
       <Root.Screen name= 'Data' component={Data} options={{headerShown:false}}/>
       <Root.Screen name= 'PutData' component={PutData} options={{headerShown:false}}/>
       <Root.Screen name= 'Formic' component={Formic} options={{headerShown:false}}/>
+      <Root.Screen name= 'Signup' component={Signup} options={{headerShown:false}}/>
+
 
       </Root.Navigator>
     </NavigationContainer>
