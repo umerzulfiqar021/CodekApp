@@ -32,7 +32,7 @@ const Profile = ({route}) => {
   return (
     <View style = {styles.main}>
 
-      <Text>{route.params.parama}</Text> 
+      {/* <Text>{route.params.parama}</Text>  */}
       <Input onSubmitEditing={(value)=>{
         saveName(value)
       }}

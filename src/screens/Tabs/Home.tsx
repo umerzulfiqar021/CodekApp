@@ -21,7 +21,7 @@ const Home = ({ navigation, route }) => {
         title="GO to Settings"
         onPress={() => onClick("Setting")}
       />
-      <ButtonComponent title="go to Profile" onPress={() => onClick(Profile)} />
+      <ButtonComponent title="go to Profile" onPress={() => onClick('Profile')} />
       <ButtonComponent
         title="Reducer"
         onPress={() => onClick("ReducerScreen")}
